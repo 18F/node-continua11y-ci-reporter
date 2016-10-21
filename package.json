@@ -1,0 +1,36 @@
+{
+  "name": "continua11y-ci-reporter",
+  "version": "1.0.0",
+  "description": "CI helper script for aggregating generated data and sending it to continua11y dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive",
+    "lint": "node_modules/.bin/jshint index.js lib/ test/",
+    "test_coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18F/node-continua11y-ci-reporter.git"
+  },
+  "keywords": [
+    "accesibility",
+    "ci",
+    "api",
+    "reporter"
+  ],
+  "author": "baccigalupi",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/18F/node-continua11y-ci-reporter/issues"
+  },
+  "homepage": "https://github.com/18F/node-continua11y-ci-reporter#readme",
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "continua11y-acceptance": "^1.1.0"
+  }
+}
