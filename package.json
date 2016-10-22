@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "CI helper script for aggregating generated data and sending it to continua11y dashboard",
   "main": "index.js",
+  "bin": {
+    "continua11y-ci-reporter": "./index.js"
+  },
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/mocha --recursive",
     "lint": "node_modules/.bin/jshint index.js lib/ test/",
@@ -28,9 +31,12 @@
     "codeclimate-test-reporter": "^0.4.0",
     "istanbul": "^0.4.5",
     "jshint": "^2.9.4",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
   },
   "dependencies": {
-    "continua11y-acceptance": "^1.1.0"
+    "async": "^2.1.2",
+    "commander": "^2.9.0",
+    "request": "^2.75.0"
   }
 }
