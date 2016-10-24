@@ -25,7 +25,20 @@ library](https://githubs.com/pa11y/pa11y).
 
 ## Usage
 
-Coming soon
+Continua11y is currently an open platform. Therefore you can just send
+your report with this module.
+
+Currently only Travis CI is supported.
+
+In your .travis.yml create an after script:
+
+    node_modules/.bin/continua11y-ci-reporter accessibility
+
+Your script may vary. For example if your path is setup to find
+`node_modules/.bin` already, good news, you can just use
+`continua11y-ci-reporter` directly. Also, `accessibility` is the
+directory where you have already written your accessibility reports. If
+you have configured it to go elsewhere, then pass that directory in.
 
 ## Contributing
 
