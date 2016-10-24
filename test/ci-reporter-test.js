@@ -46,6 +46,7 @@ describe('CIReporter', () => {
     process.env.TRAVIS_COMMIT = 'abc123abcebc';
 
     reporter.send((err) => {
+      if (err) { done(err); }
       assert(logger.withArgs('Successfully sent accessibility test data!').calledOnce);
       done(err);
     });
@@ -57,6 +58,7 @@ describe('CIReporter', () => {
     process.env.TRAVIS_COMMIT = 'abc123abcebc';
 
     reporter.send((err) => {
+      if (err) { done(err); }
       assert(logger.withArgs('Successfully sent accessibility test data!').calledOnce);
       assert.equal(requestOptions.uri, 'https://continua11y-staging.apps.cloud.gov/reports');
       assert.equal(requestOptions.method, 'POST');
@@ -70,6 +72,7 @@ describe('CIReporter', () => {
     process.env.TRAVIS_COMMIT = 'abc123abcebc';
 
     reporter.send((err) => {
+      if (err) { done(err); }
       let json = requestOptions.json;
       assert.equal(json.repo, 'continua11y-due');
       assert.equal(json.owner, '18F');
