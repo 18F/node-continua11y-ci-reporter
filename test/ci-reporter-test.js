@@ -6,7 +6,7 @@ const CIReporter = require('../lib/ci-reporter');
 
 describe('CIReporter', () => {
   let logger, request, reporter, requestOptions;
-  const directory = __dirname + '/fixtures/accessibility';
+  const directory = __dirname + '/fixtures/accessibility-reports';
 
   before(() => {
     request = CIReporter.request;
